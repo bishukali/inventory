@@ -1,5 +1,4 @@
 package com.shopesimple.invmanagerpaymentgatway.PaymentGateways.Stripe;
-
 import com.shopesimple.invmanagerpaymentgatway.PaymentGateways.PaymentGatewayInterface;
 import com.stripe.Stripe;
 import com.stripe.exception.StripeException;
@@ -9,15 +8,18 @@ import com.stripe.model.Product;
 import com.stripe.param.PaymentLinkCreateParams;
 import com.stripe.param.PriceCreateParams;
 import com.stripe.param.ProductCreateParams;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Component;
 
-
 @Component
+@Qualifier
 public class StripePaymentGateway implements PaymentGatewayInterface {
-
     @Value("${stripe.secret_key_test}")
     private String stripeKeyTest;
+
+
     @Override
     public String PaymentLinkCreator(Long amount) throws StripeException {
 // Set your secret key. Remember to switch to your live secret key in production.
