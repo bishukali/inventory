@@ -12,9 +12,9 @@ import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Service;
 
 @Component
-@Qualifier
 public class StripePaymentGateway implements PaymentGatewayInterface {
     @Value("${stripe.secret_key_test}")
     private String stripeKeyTest;
