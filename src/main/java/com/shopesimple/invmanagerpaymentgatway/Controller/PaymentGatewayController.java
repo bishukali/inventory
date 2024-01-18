@@ -13,6 +13,9 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/api/payment-gateway")
 public class PaymentGatewayController {
     private final PaymentGatewayService paymentGatewayService;
+
+
+    @Autowired
     public PaymentGatewayController(PaymentGatewayService paymentGatewayService) {
         this.paymentGatewayService = paymentGatewayService;
     }

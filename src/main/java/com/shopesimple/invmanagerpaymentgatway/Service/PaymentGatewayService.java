@@ -9,6 +9,7 @@ import org.springframework.stereotype.Service;
 @Service
 public class PaymentGatewayService {
 private final PaymentGatewayInterface paymentGatewayInterface;
+@Autowired
 //    private final StripePaymentGateway stripePaymentGateway;
     public PaymentGatewayService(@Qualifier("stripePaymentGateway") PaymentGatewayInterface paymentGatewayInterface) {
         this.paymentGatewayInterface = paymentGatewayInterface;
