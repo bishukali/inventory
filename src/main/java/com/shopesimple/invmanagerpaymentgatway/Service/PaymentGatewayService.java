@@ -1,6 +1,6 @@
 package com.shopesimple.invmanagerpaymentgatway.Service;
 import com.shopesimple.invmanagerpaymentgatway.PaymentGateways.PaymentGatewayInterface;
-import com.shopesimple.invmanagerpaymentgatway.PaymentGateways.Stripe.StripePaymentGateway;
+// import com.shopesimple.invmanagerpaymentgatway.PaymentGateways.Stripe.StripePaymentGateway;
 import com.stripe.exception.StripeException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
