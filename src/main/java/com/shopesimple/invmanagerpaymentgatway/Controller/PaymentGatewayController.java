@@ -10,14 +10,14 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping("/pay")
+@RequestMapping("/api/payment-gateway")
 public class PaymentGatewayController {
     private final PaymentGatewayService paymentGatewayService;
     public PaymentGatewayController(PaymentGatewayService paymentGatewayService) {
         this.paymentGatewayService = paymentGatewayService;
     }
 
-    @PostMapping("/")
+    @PostMapping("/payment-link-creator")
     public String PaymentLinkCreator(@RequestBody PaymentGatewayRequestDto request) throws StripeException {
         return paymentGatewayService.PaymentLinkCreator(request.getOrderId());
     }
