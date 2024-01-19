@@ -1,4 +1,5 @@
 FROM openjdk:17
-COPY target/*.jar /app
+WORKDIR /app
+COPY ./target/*.jar /app
 EXPOSE 8080
-ENTRYPOINT ["java","-jar","*/app/*.jar"]
+ENTRYPOINT ["java","-jar","*.jar"]
